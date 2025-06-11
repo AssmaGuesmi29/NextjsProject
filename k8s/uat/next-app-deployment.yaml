@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjs
+  namespace: uat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextjs
+  template:
+    metadata:
+      labels:
+        app: nextjs
+    spec:
+      containers:
+        - name: nextjs
+          image: asma589/next-app:v3
+          ports:
+            - containerPort: 3000
+
+

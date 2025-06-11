@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nextjs-config
+  namespace: prod
+data:
+  DYNAMODB_URL: http://dynamodb:8000
+  NODE_ENV: production
